@@ -1,0 +1,29 @@
+﻿<Window x:Class="TeretanaWPF.View.RadiView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeretanaWPF.View"
+        mc:Ignorable="d"
+        Title="RadiView" Height="310" Width="620">
+    <Grid Background="Yellow">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <Button x:Name="dodajButton" Content="Dodaj" Height="88" Click="dodajButton_Click"/>
+            <!--<Button x:Name="deleteButton" Content="Izbrisi" Height="88" Click="izbrisiButton_Click"/>-->
+        </StackPanel>
+
+        <DataGrid Grid.Column="1" x:Name="dataGrid" SelectionChanged="dataGrid_SelectionChanged" AutoGenerateColumns="False" Height="265" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" SelectionMode="Single" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="IdTeretana" Width="*" Binding="{Binding TeratanaLokacija}" />
+                <DataGridTextColumn Header="IdZaposleni" Width="*" Binding="{Binding ZaposleniIdBedz}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

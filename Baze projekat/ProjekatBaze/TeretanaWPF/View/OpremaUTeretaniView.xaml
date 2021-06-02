@@ -1,0 +1,29 @@
+﻿<Window x:Class="TeretanaWPF.View.OpremaUTeretaniView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeretanaWPF.View"
+        mc:Ignorable="d"
+        Title="OpremaUTeretaniView" Height="310" Width="620">
+    <Grid Background="Yellow">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <Button x:Name="dodajButton" Content="Dodaj" Height="88" Click="dodajButton_Click"/>
+        </StackPanel>
+
+        <DataGrid Grid.Column="1" x:Name="dataGrid" SelectionChanged="dataGrid_SelectionChanged" AutoGenerateColumns="False" Height="265" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" SelectionMode="Single" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="*" Binding="{Binding IdOprema}" />
+                <DataGridTextColumn Header="Naziv" Width="*" Binding="{Binding Naziv}" />
+                <DataGridTextColumn Header="Kolicina" Width="*" Binding="{Binding Kolicina}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

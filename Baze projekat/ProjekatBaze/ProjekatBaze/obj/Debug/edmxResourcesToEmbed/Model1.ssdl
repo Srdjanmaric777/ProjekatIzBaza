@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="CasTreningas" EntityType="Model1.Store.CasTreningas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Clans" EntityType="Model1.Store.Clans" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OpremaUteretanis" EntityType="Model1.Store.OpremaUteretanis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Teratanas" EntityType="Model1.Store.Teratanas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Zaposlenis" EntityType="Model1.Store.Zaposlenis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ObicanVezbacs" EntityType="Model1.Store.ObicanVezbacs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Uzimas" EntityType="Model1.Store.Uzimas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ides" EntityType="Model1.Store.Ides" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProbniTrenings" EntityType="Model1.Store.ProbniTrenings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Radis" EntityType="Model1.Store.Radis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cistis" EntityType="Model1.Store.Cistis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Drzis" EntityType="Model1.Store.Drzis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Zaposlenis_Cistacica" EntityType="Model1.Store.Zaposlenis_Cistacica" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Zaposlenis_Trener" EntityType="Model1.Store.Zaposlenis_Trener" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Zaposlenis_Menadzer" EntityType="Model1.Store.Zaposlenis_Menadzer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Zaposlenis_Recepcionista" EntityType="Model1.Store.Zaposlenis_Recepcionista" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OpremaUteretanis_Sprave" EntityType="Model1.Store.OpremaUteretanis_Sprave" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OpremaUteretanis_Tegovi" EntityType="Model1.Store.OpremaUteretanis_Tegovi" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="TeratanaOpremaUteretani" Association="Model1.Store.TeratanaOpremaUteretani">
+      <End Role="Teratana" EntitySet="Teratanas" />
+      <End Role="OpremaUteretani" EntitySet="OpremaUteretanis" />
+    </AssociationSet>
+    <AssociationSet Name="UzimaCasTreninga" Association="Model1.Store.UzimaCasTreninga">
+      <End Role="Uzima" EntitySet="Uzimas" />
+      <End Role="CasTreninga" EntitySet="CasTreningas" />
+    </AssociationSet>
+    <AssociationSet Name="UzimaClan" Association="Model1.Store.UzimaClan">
+      <End Role="Uzima" EntitySet="Uzimas" />
+      <End Role="Clan" EntitySet="Clans" />
+    </AssociationSet>
+    <AssociationSet Name="ClanOpremaUteretani" Association="Model1.Store.ClanOpremaUteretani">
+      <End Role="Clan" EntitySet="Clans" />
+      <End Role="OpremaUteretani" EntitySet="OpremaUteretanis" />
+    </AssociationSet>
+    <AssociationSet Name="IdeTeratana" Association="Model1.Store.IdeTeratana">
+      <End Role="Ide" EntitySet="Ides" />
+      <End Role="Teratana" EntitySet="Teratanas" />
+    </AssociationSet>
+    <AssociationSet Name="IdeClan" Association="Model1.Store.IdeClan">
+      <End Role="Ide" EntitySet="Ides" />
+      <End Role="Clan" EntitySet="Clans" />
+    </AssociationSet>
+    <AssociationSet Name="ProbniTreningTeratana" Association="Model1.Store.ProbniTreningTeratana">
+      <End Role="ProbniTrening" EntitySet="ProbniTrenings" />
+      <End Role="Teratana" EntitySet="Teratanas" />
+    </AssociationSet>
+    <AssociationSet Name="ProbniTreningObicanVezbac" Association="Model1.Store.ProbniTreningObicanVezbac">
+      <End Role="ProbniTrening" EntitySet="ProbniTrenings" />
+      <End Role="ObicanVezbac" EntitySet="ObicanVezbacs" />
+    </AssociationSet>
+    <AssociationSet Name="OpremaUteretaniObicanVezbac" Association="Model1.Store.OpremaUteretaniObicanVezbac">
+      <End Role="OpremaUteretani" EntitySet="OpremaUteretanis" />
+      <End Role="ObicanVezbac" EntitySet="ObicanVezbacs" />
+    </AssociationSet>
+    <AssociationSet Name="RadiTeratana" Association="Model1.Store.RadiTeratana">
+      <End Role="Radi" EntitySet="Radis" />
+      <End Role="Teratana" EntitySet="Teratanas" />
+    </AssociationSet>
+    <AssociationSet Name="RadiZaposleni" Association="Model1.Store.RadiZaposleni">
+      <End Role="Radi" EntitySet="Radis" />
+      <End Role="Zaposleni" EntitySet="Zaposlenis" />
+    </AssociationSet>
+    <AssociationSet Name="CistiTeratana" Association="Model1.Store.CistiTeratana">
+      <End Role="Cisti" EntitySet="Cistis" />
+      <End Role="Teratana" EntitySet="Teratanas" />
+    </AssociationSet>
+    <AssociationSet Name="CistiCistacica" Association="Model1.Store.CistiCistacica">
+      <End Role="Cisti" EntitySet="Cistis" />
+      <End Role="Cistacica" EntitySet="Zaposlenis_Cistacica" />
+    </AssociationSet>
+    <AssociationSet Name="DrziTrener" Association="Model1.Store.DrziTrener">
+      <End Role="Drzi" EntitySet="Drzis" />
+      <End Role="Trener" EntitySet="Zaposlenis_Trener" />
+    </AssociationSet>
+    <AssociationSet Name="DrziCasTreninga" Association="Model1.Store.DrziCasTreninga">
+      <End Role="Drzi" EntitySet="Drzis" />
+      <End Role="CasTreninga" EntitySet="CasTreningas" />
+    </AssociationSet>
+    <AssociationSet Name="TeratanaMenadzer" Association="Model1.Store.TeratanaMenadzer">
+      <End Role="Teratana" EntitySet="Teratanas" />
+      <End Role="Menadzer" EntitySet="Zaposlenis_Menadzer" />
+    </AssociationSet>
+    <AssociationSet Name="TrenerOpremaUteretani" Association="Model1.Store.TrenerOpremaUteretani">
+      <End Role="Trener" EntitySet="Zaposlenis_Trener" />
+      <End Role="OpremaUteretani" EntitySet="OpremaUteretanis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cistacica_inherits_Zaposleni" Association="Model1.Store.FK_Cistacica_inherits_Zaposleni">
+      <End Role="Zaposleni" EntitySet="Zaposlenis" />
+      <End Role="Cistacica" EntitySet="Zaposlenis_Cistacica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trener_inherits_Zaposleni" Association="Model1.Store.FK_Trener_inherits_Zaposleni">
+      <End Role="Zaposleni" EntitySet="Zaposlenis" />
+      <End Role="Trener" EntitySet="Zaposlenis_Trener" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menadzer_inherits_Zaposleni" Association="Model1.Store.FK_Menadzer_inherits_Zaposleni">
+      <End Role="Zaposleni" EntitySet="Zaposlenis" />
+      <End Role="Menadzer" EntitySet="Zaposlenis_Menadzer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recepcionista_inherits_Zaposleni" Association="Model1.Store.FK_Recepcionista_inherits_Zaposleni">
+      <End Role="Zaposleni" EntitySet="Zaposlenis" />
+      <End Role="Recepcionista" EntitySet="Zaposlenis_Recepcionista" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sprave_inherits_OpremaUteretani" Association="Model1.Store.FK_Sprave_inherits_OpremaUteretani">
+      <End Role="OpremaUteretani" EntitySet="OpremaUteretanis" />
+      <End Role="Sprave" EntitySet="OpremaUteretanis_Sprave" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tegovi_inherits_OpremaUteretani" Association="Model1.Store.FK_Tegovi_inherits_OpremaUteretani">
+      <End Role="OpremaUteretani" EntitySet="OpremaUteretanis" />
+      <End Role="Tegovi" EntitySet="OpremaUteretanis_Tegovi" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CasTreningas">
+    <Key>
+      <PropertyRef Name="IdCasTreninga" />
+    </Key>
+    <Property Name="IdCasTreninga" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DatumIVreme" Type="datetime" Nullable="false" />
+    <Property Name="BrojClanova" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Clans">
+    <Key>
+      <PropertyRef Name="Kartica" />
+    </Key>
+    <Property Name="Kartica" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Prezime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OpremaZaVezbanje" Type="int" Nullable="false" />
+    <Property Name="OpremaUteretaniIdOprema" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="OpremaUteretanis">
+    <Key>
+      <PropertyRef Name="IdOprema" />
+    </Key>
+    <Property Name="IdOprema" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Kolicina" Type="int" Nullable="false" />
+    <Property Name="TeratanaLokacija" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teratanas">
+    <Key>
+      <PropertyRef Name="Lokacija" />
+    </Key>
+    <Property Name="Lokacija" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BrojTelefona" Type="int" Nullable="false" />
+    <Property Name="MenadzerIdBedz" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Zaposlenis">
+    <Key>
+      <PropertyRef Name="IdBedz" />
+    </Key>
+    <Property Name="IdBedz" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Prezime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tip" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ObicanVezbacs">
+    <Key>
+      <PropertyRef Name="IdObicanVezbac" />
+    </Key>
+    <Property Name="IdObicanVezbac" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Prezime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OpremaZaVezbanje" Type="int" Nullable="false" />
+    <Property Name="OpremaUteretaniIdOprema" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Uzimas">
+    <Key>
+      <PropertyRef Name="CasTreningaIdCasTreninga" />
+      <PropertyRef Name="ClanKartica" />
+    </Key>
+    <Property Name="CasTreningaIdCasTreninga" Type="int" Nullable="false" />
+    <Property Name="ClanKartica" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ides">
+    <Key>
+      <PropertyRef Name="TeratanaLokacija" />
+      <PropertyRef Name="ClanKartica" />
+    </Key>
+    <Property Name="TeratanaLokacija" Type="int" Nullable="false" />
+    <Property Name="ClanKartica" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProbniTrenings">
+    <Key>
+      <PropertyRef Name="TeratanaLokacija" />
+      <PropertyRef Name="ObicanVezbacIdObicanVezbac" />
+    </Key>
+    <Property Name="TeratanaLokacija" Type="int" Nullable="false" />
+    <Property Name="ObicanVezbacIdObicanVezbac" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Radis">
+    <Key>
+      <PropertyRef Name="TeratanaLokacija" />
+      <PropertyRef Name="ZaposleniIdBedz" />
+    </Key>
+    <Property Name="TeratanaLokacija" Type="int" Nullable="false" />
+    <Property Name="ZaposleniIdBedz" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cistis">
+    <Key>
+      <PropertyRef Name="TeratanaLokacija" />
+      <PropertyRef Name="CistacicaIdBedz" />
+    </Key>
+    <Property Name="TeratanaLokacija" Type="int" Nullable="false" />
+    <Property Name="CistacicaIdBedz" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Drzis">
+    <Key>
+      <PropertyRef Name="TrenerIdBedz" />
+      <PropertyRef Name="CasTreningaIdCasTreninga" />
+    </Key>
+    <Property Name="TrenerIdBedz" Type="int" Nullable="false" />
+    <Property Name="CasTreningaIdCasTreninga" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Zaposlenis_Cistacica">
+    <Key>
+      <PropertyRef Name="IdBedz" />
+    </Key>
+    <Property Name="IdBedz" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Zaposlenis_Trener">
+    <Key>
+      <PropertyRef Name="IdBedz" />
+    </Key>
+    <Property Name="Sertifikat" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OpremaUteretaniIdOprema" Type="int" Nullable="true" />
+    <Property Name="IdBedz" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Zaposlenis_Menadzer">
+    <Key>
+      <PropertyRef Name="IdBedz" />
+    </Key>
+    <Property Name="IdBedz" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Zaposlenis_Recepcionista">
+    <Key>
+      <PropertyRef Name="IdBedz" />
+    </Key>
+    <Property Name="IdBedz" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OpremaUteretanis_Sprave">
+    <Key>
+      <PropertyRef Name="IdOprema" />
+    </Key>
+    <Property Name="DeoTela" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IdOprema" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OpremaUteretanis_Tegovi">
+    <Key>
+      <PropertyRef Name="IdOprema" />
+    </Key>
+    <Property Name="Tezina" Type="int" Nullable="false" />
+    <Property Name="IdOprema" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="TeratanaOpremaUteretani">
+    <End Role="Teratana" Type="Model1.Store.Teratanas" Multiplicity="1" />
+    <End Role="OpremaUteretani" Type="Model1.Store.OpremaUteretanis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teratana">
+        <PropertyRef Name="Lokacija" />
+      </Principal>
+      <Dependent Role="OpremaUteretani">
+        <PropertyRef Name="TeratanaLokacija" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UzimaCasTreninga">
+    <End Role="Uzima" Type="Model1.Store.Uzimas" Multiplicity="*" />
+    <End Role="CasTreninga" Type="Model1.Store.CasTreningas" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="CasTreninga">
+        <PropertyRef Name="IdCasTreninga" />
+      </Principal>
+      <Dependent Role="Uzima">
+        <PropertyRef Name="CasTreningaIdCasTreninga" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UzimaClan">
+    <End Role="Uzima" Type="Model1.Store.Uzimas" Multiplicity="*" />
+    <End Role="Clan" Type="Model1.Store.Clans" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Clan">
+        <PropertyRef Name="Kartica" />
+      </Principal>
+      <Dependent Role="Uzima">
+        <PropertyRef Name="ClanKartica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClanOpremaUteretani">
+    <End Role="Clan" Type="Model1.Store.Clans" Multiplicity="*" />
+    <End Role="OpremaUteretani" Type="Model1.Store.OpremaUteretanis" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="OpremaUteretani">
+        <PropertyRef Name="IdOprema" />
+      </Principal>
+      <Dependent Role="Clan">
+        <PropertyRef Name="OpremaUteretaniIdOprema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IdeTeratana">
+    <End Role="Ide" Type="Model1.Store.Ides" Multiplicity="*" />
+    <End Role="Teratana" Type="Model1.Store.Teratanas" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Teratana">
+        <PropertyRef Name="Lokacija" />
+      </Principal>
+      <Dependent Role="Ide">
+        <PropertyRef Name="TeratanaLokacija" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IdeClan">
+    <End Role="Ide" Type="Model1.Store.Ides" Multiplicity="*" />
+    <End Role="Clan" Type="Model1.Store.Clans" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Clan">
+        <PropertyRef Name="Kartica" />
+      </Principal>
+      <Dependent Role="Ide">
+        <PropertyRef Name="ClanKartica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProbniTreningTeratana">
+    <End Role="ProbniTrening" Type="Model1.Store.ProbniTrenings" Multiplicity="*" />
+    <End Role="Teratana" Type="Model1.Store.Teratanas" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Teratana">
+        <PropertyRef Name="Lokacija" />
+      </Principal>
+      <Dependent Role="ProbniTrening">
+        <PropertyRef Name="TeratanaLokacija" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProbniTreningObicanVezbac">
+    <End Role="ProbniTrening" Type="Model1.Store.ProbniTrenings" Multiplicity="*" />
+    <End Role="ObicanVezbac" Type="Model1.Store.ObicanVezbacs" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="ObicanVezbac">
+        <PropertyRef Name="IdObicanVezbac" />
+      </Principal>
+      <Dependent Role="ProbniTrening">
+        <PropertyRef Name="ObicanVezbacIdObicanVezbac" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OpremaUteretaniObicanVezbac">
+    <End Role="OpremaUteretani" Type="Model1.Store.OpremaUteretanis" Multiplicity="0..1" />
+    <End Role="ObicanVezbac" Type="Model1.Store.ObicanVezbacs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OpremaUteretani">
+        <PropertyRef Name="IdOprema" />
+      </Principal>
+      <Dependent Role="ObicanVezbac">
+        <PropertyRef Name="OpremaUteretaniIdOprema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RadiTeratana">
+    <End Role="Radi" Type="Model1.Store.Radis" Multiplicity="*" />
+    <End Role="Teratana" Type="Model1.Store.Teratanas" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Teratana">
+        <PropertyRef Name="Lokacija" />
+      </Principal>
+      <Dependent Role="Radi">
+        <PropertyRef Name="TeratanaLokacija" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RadiZaposleni">
+    <End Role="Radi" Type="Model1.Store.Radis" Multiplicity="*" />
+    <End Role="Zaposleni" Type="Model1.Store.Zaposlenis" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Zaposleni">
+        <PropertyRef Name="IdBedz" />
+      </Principal>
+      <Dependent Role="Radi">
+        <PropertyRef Name="ZaposleniIdBedz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CistiTeratana">
+    <End Role="Cisti" Type="Model1.Store.Cistis" Multiplicity="*" />
+    <End Role="Teratana" Type="Model1.Store.Teratanas" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Teratana">
+        <PropertyRef Name="Lokacija" />
+      </Principal>
+      <Dependent Role="Cisti">
+        <PropertyRef Name="TeratanaLokacija" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CistiCistacica">
+    <End Role="Cisti" Type="Model1.Store.Cistis" Multiplicity="*" />
+    <End Role="Cistacica" Type="Model1.Store.Zaposlenis_Cistacica" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Cistacica">
+        <PropertyRef Name="IdBedz" />
+      </Principal>
+      <Dependent Role="Cisti">
+        <PropertyRef Name="CistacicaIdBedz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DrziTrener">
+    <End Role="Drzi" Type="Model1.Store.Drzis" Multiplicity="*" />
+    <End Role="Trener" Type="Model1.Store.Zaposlenis_Trener" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Trener">
+        <PropertyRef Name="IdBedz" />
+      </Principal>
+      <Dependent Role="Drzi">
+        <PropertyRef Name="TrenerIdBedz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DrziCasTreninga">
+    <End Role="Drzi" Type="Model1.Store.Drzis" Multiplicity="*" />
+    <End Role="CasTreninga" Type="Model1.Store.CasTreningas" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="CasTreninga">
+        <PropertyRef Name="IdCasTreninga" />
+      </Principal>
+      <Dependent Role="Drzi">
+        <PropertyRef Name="CasTreningaIdCasTreninga" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TeratanaMenadzer">
+    <End Role="Teratana" Type="Model1.Store.Teratanas" Multiplicity="*" />
+    <End Role="Menadzer" Type="Model1.Store.Zaposlenis_Menadzer" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Menadzer">
+        <PropertyRef Name="IdBedz" />
+      </Principal>
+      <Dependent Role="Teratana">
+        <PropertyRef Name="MenadzerIdBedz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TrenerOpremaUteretani">
+    <End Role="Trener" Type="Model1.Store.Zaposlenis_Trener" Multiplicity="*" />
+    <End Role="OpremaUteretani" Type="Model1.Store.OpremaUteretanis" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="OpremaUteretani">
+        <PropertyRef Name="IdOprema" />
+      </Principal>
+      <Dependent Role="Trener">
+        <PropertyRef Name="OpremaUteretaniIdOprema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cistacica_inherits_Zaposleni">
+    <End Role="Zaposleni" Type="Model1.Store.Zaposlenis" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Cistacica" Type="Model1.Store.Zaposlenis_Cistacica" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Zaposleni">
+        <PropertyRef Name="IdBedz" />
+      </Principal>
+      <Dependent Role="Cistacica">
+        <PropertyRef Name="IdBedz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trener_inherits_Zaposleni">
+    <End Role="Zaposleni" Type="Model1.Store.Zaposlenis" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Trener" Type="Model1.Store.Zaposlenis_Trener" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Zaposleni">
+        <PropertyRef Name="IdBedz" />
+      </Principal>
+      <Dependent Role="Trener">
+        <PropertyRef Name="IdBedz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menadzer_inherits_Zaposleni">
+    <End Role="Zaposleni" Type="Model1.Store.Zaposlenis" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Menadzer" Type="Model1.Store.Zaposlenis_Menadzer" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Zaposleni">
+        <PropertyRef Name="IdBedz" />
+      </Principal>
+      <Dependent Role="Menadzer">
+        <PropertyRef Name="IdBedz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recepcionista_inherits_Zaposleni">
+    <End Role="Zaposleni" Type="Model1.Store.Zaposlenis" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Recepcionista" Type="Model1.Store.Zaposlenis_Recepcionista" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Zaposleni">
+        <PropertyRef Name="IdBedz" />
+      </Principal>
+      <Dependent Role="Recepcionista">
+        <PropertyRef Name="IdBedz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sprave_inherits_OpremaUteretani">
+    <End Role="OpremaUteretani" Type="Model1.Store.OpremaUteretanis" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sprave" Type="Model1.Store.OpremaUteretanis_Sprave" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="OpremaUteretani">
+        <PropertyRef Name="IdOprema" />
+      </Principal>
+      <Dependent Role="Sprave">
+        <PropertyRef Name="IdOprema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tegovi_inherits_OpremaUteretani">
+    <End Role="OpremaUteretani" Type="Model1.Store.OpremaUteretanis" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Tegovi" Type="Model1.Store.OpremaUteretanis_Tegovi" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="OpremaUteretani">
+        <PropertyRef Name="IdOprema" />
+      </Principal>
+      <Dependent Role="Tegovi">
+        <PropertyRef Name="IdOprema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

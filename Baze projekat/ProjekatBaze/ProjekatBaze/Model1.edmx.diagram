@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4ff11c6fefe34a25878c3763763a2049" Name="Diagram1" ZoomLevel="80" >
+        <EntityTypeShape EntityType="Model1.CasTreninga" Width="1.5" PointX="8.75" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.Clan" Width="1.5" PointX="1.25" PointY="0.625" />
+        <EntityTypeShape EntityType="Model1.OpremaUteretani" Width="1.5" PointX="1.75" PointY="5.875" />
+        <EntityTypeShape EntityType="Model1.Teratana" Width="1.5" PointX="6" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Zaposleni" Width="1.5" PointX="11.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Model1.ObicanVezbac" Width="1.5" PointX="4.125" PointY="6.125" />
+        <AssociationConnector Association="Model1.TeratanaOpremaUteretani" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model1.Uzima" Width="1.5" PointX="6" PointY="0.5" />
+        <AssociationConnector Association="Model1.UzimaCasTreninga" />
+        <AssociationConnector Association="Model1.UzimaClan" />
+        <AssociationConnector Association="Model1.ClanOpremaUteretani" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model1.Menadzer" Width="1.5" PointX="12.125" PointY="2.625" />
+        <InheritanceConnector EntityType="Model1.Menadzer" />
+        <EntityTypeShape EntityType="Model1.Cistacica" Width="1.5" PointX="10.125" PointY="7.875" />
+        <InheritanceConnector EntityType="Model1.Cistacica" />
+        <EntityTypeShape EntityType="Model1.Recepcionista" Width="1.5" PointX="12.375" PointY="7.875" />
+        <InheritanceConnector EntityType="Model1.Recepcionista" />
+        <EntityTypeShape EntityType="Model1.Trener" Width="1.5" PointX="14.875" PointY="7.875" />
+        <InheritanceConnector EntityType="Model1.Trener" />
+        <EntityTypeShape EntityType="Model1.Sprave" Width="1.5" PointX="0.5" PointY="4" IsExpanded="true" />
+        <InheritanceConnector EntityType="Model1.Sprave" />
+        <EntityTypeShape EntityType="Model1.Tegovi" Width="1.5" PointX="0.5" PointY="9" />
+        <InheritanceConnector EntityType="Model1.Tegovi" />
+        <EntityTypeShape EntityType="Model1.Ide" Width="1.5" PointX="3.5" PointY="2.875" />
+        <AssociationConnector Association="Model1.IdeTeratana" />
+        <AssociationConnector Association="Model1.IdeClan" />
+        <EntityTypeShape EntityType="Model1.ProbniTrening" Width="1.5" PointX="6.25" PointY="6.375" />
+        <AssociationConnector Association="Model1.ProbniTreningTeratana" />
+        <AssociationConnector Association="Model1.ProbniTreningObicanVezbac" />
+        <AssociationConnector Association="Model1.OpremaUteretaniObicanVezbac" />
+        <EntityTypeShape EntityType="Model1.Radi" Width="1.5" PointX="9.25" PointY="2.875" />
+        <AssociationConnector Association="Model1.RadiTeratana" />
+        <AssociationConnector Association="Model1.RadiZaposleni" />
+        <EntityTypeShape EntityType="Model1.Cisti" Width="1.5" PointX="9.125" PointY="5" />
+        <AssociationConnector Association="Model1.CistiTeratana" />
+        <AssociationConnector Association="Model1.CistiCistacica" />
+        <EntityTypeShape EntityType="Model1.Drzi" Width="1.5" PointX="15" PointY="0.5" />
+        <AssociationConnector Association="Model1.DrziTrener" />
+        <AssociationConnector Association="Model1.DrziCasTreninga" />
+        <AssociationConnector Association="Model1.TeratanaMenadzer" />
+        <AssociationConnector Association="Model1.TrenerOpremaUteretani" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

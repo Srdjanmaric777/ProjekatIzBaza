@@ -1,0 +1,34 @@
+﻿<Window x:Class="TeretanaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeretanaWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800">
+    <!--<Grid>
+        
+    </Grid>-->
+
+    <StackPanel Orientation="Vertical">
+        
+        <Button x:Name="teretanaButton" Content="Teretane" Height="50" FontSize="30" Click="teretanaButton_Click"/>
+        
+        <Button x:Name="zaposleniButton" Content="Zaposleni" Height="50" FontSize="30" Click="zaposleniButton_Click"/>
+        
+        <Button x:Name="casoviTreningaiButton" Content="Casovi Treninga" Height="50" FontSize="30" Click="casTreningaButton_Click"/>
+        
+        <Button x:Name="clanoviButton" Content="Clanovi" Height="50" FontSize="30" Click="clanButton_Click"/>
+
+        <Button x:Name="opremaUTeretaniButton" Content="Oprema u teretani" Height="50" FontSize="30" Click="opremaButton_Click"/>
+        
+        <Button x:Name="obicanVezbacButton" Content="Obican vezbac" Height="50" FontSize="30" Click="obicanVezbacButton_Click"/>
+        
+        <Button x:Name="uzimaButton" Content="Uzima" Height="50" FontSize="30" Click="uzimaButton_Click"/>
+        <Button x:Name="ideButton" Content="Ide" Height="50" FontSize="30" Click="ideButton_Click"/>
+        <Button x:Name="radiButton" Content="Radi" Height="50" FontSize="30" Click="radiButton_Click"/>
+        <Button x:Name="probniTreningButton" Content="Probni Trening" Height="50" FontSize="30" Click="probniTreningButton_Click"/>
+        
+    </StackPanel>
+
+</Window>

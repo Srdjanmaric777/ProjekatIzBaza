@@ -1,0 +1,12 @@
+C:\Users\S\Desktop\Baze projekat\ProjekatBaze\ProjekatBaze\bin\Debug\ProjekatBaze.dll.config
+C:\Users\S\Desktop\Baze projekat\ProjekatBaze\ProjekatBaze\bin\Debug\ProjekatBaze.dll
+C:\Users\S\Desktop\Baze projekat\ProjekatBaze\ProjekatBaze\bin\Debug\ProjekatBaze.pdb
+C:\Users\S\Desktop\Baze projekat\ProjekatBaze\ProjekatBaze\bin\Debug\EntityFramework.dll
+C:\Users\S\Desktop\Baze projekat\ProjekatBaze\ProjekatBaze\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\S\Desktop\Baze projekat\ProjekatBaze\ProjekatBaze\bin\Debug\EntityFramework.xml
+C:\Users\S\Desktop\Baze projekat\ProjekatBaze\ProjekatBaze\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\S\Desktop\Baze projekat\ProjekatBaze\ProjekatBaze\obj\Debug\ProjekatBaze.csprojAssemblyReference.cache
+C:\Users\S\Desktop\Baze projekat\ProjekatBaze\ProjekatBaze\obj\Debug\ProjekatBaze.csproj.CoreCompileInputs.cache
+C:\Users\S\Desktop\Baze projekat\ProjekatBaze\ProjekatBaze\obj\Debug\ProjekatBaze.csproj.CopyComplete
+C:\Users\S\Desktop\Baze projekat\ProjekatBaze\ProjekatBaze\obj\Debug\ProjekatBaze.dll
+C:\Users\S\Desktop\Baze projekat\ProjekatBaze\ProjekatBaze\obj\Debug\ProjekatBaze.pdb

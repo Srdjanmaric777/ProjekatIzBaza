@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Context">
+    <EntitySetMapping Name="CasTreningas">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.CasTreninga)">
+        <MappingFragment StoreEntitySet="CasTreningas">
+          <ScalarProperty Name="IdCasTreninga" ColumnName="IdCasTreninga" />
+          <ScalarProperty Name="DatumIVreme" ColumnName="DatumIVreme" />
+          <ScalarProperty Name="BrojClanova" ColumnName="BrojClanova" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clans">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Clan)">
+        <MappingFragment StoreEntitySet="Clans">
+          <ScalarProperty Name="Kartica" ColumnName="Kartica" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="OpremaZaVezbanje" ColumnName="OpremaZaVezbanje" />
+          <ScalarProperty Name="OpremaUteretaniIdOprema" ColumnName="OpremaUteretaniIdOprema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpremaUteretanis">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.OpremaUteretani)">
+        <MappingFragment StoreEntitySet="OpremaUteretanis">
+          <ScalarProperty Name="IdOprema" ColumnName="IdOprema" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+          <ScalarProperty Name="TeratanaLokacija" ColumnName="TeratanaLokacija" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Sprave)">
+        <MappingFragment StoreEntitySet="OpremaUteretanis_Sprave">
+          <ScalarProperty Name="IdOprema" ColumnName="IdOprema" />
+          <ScalarProperty Name="DeoTela" ColumnName="DeoTela" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Tegovi)">
+        <MappingFragment StoreEntitySet="OpremaUteretanis_Tegovi">
+          <ScalarProperty Name="IdOprema" ColumnName="IdOprema" />
+          <ScalarProperty Name="Tezina" ColumnName="Tezina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teratanas">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Teratana)">
+        <MappingFragment StoreEntitySet="Teratanas">
+          <ScalarProperty Name="Lokacija" ColumnName="Lokacija" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="BrojTelefona" ColumnName="BrojTelefona" />
+          <ScalarProperty Name="MenadzerIdBedz" ColumnName="MenadzerIdBedz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zaposlenis">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Zaposleni)">
+        <MappingFragment StoreEntitySet="Zaposlenis">
+          <ScalarProperty Name="IdBedz" ColumnName="IdBedz" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Tip" ColumnName="Tip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Cistacica)">
+        <MappingFragment StoreEntitySet="Zaposlenis_Cistacica">
+          <ScalarProperty Name="IdBedz" ColumnName="IdBedz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Trener)">
+        <MappingFragment StoreEntitySet="Zaposlenis_Trener">
+          <ScalarProperty Name="IdBedz" ColumnName="IdBedz" />
+          <ScalarProperty Name="Sertifikat" ColumnName="Sertifikat" />
+          <ScalarProperty Name="OpremaUteretaniIdOprema" ColumnName="OpremaUteretaniIdOprema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Menadzer)">
+        <MappingFragment StoreEntitySet="Zaposlenis_Menadzer">
+          <ScalarProperty Name="IdBedz" ColumnName="IdBedz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Recepcionista)">
+        <MappingFragment StoreEntitySet="Zaposlenis_Recepcionista">
+          <ScalarProperty Name="IdBedz" ColumnName="IdBedz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObicanVezbacs">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ObicanVezbac)">
+        <MappingFragment StoreEntitySet="ObicanVezbacs">
+          <ScalarProperty Name="IdObicanVezbac" ColumnName="IdObicanVezbac" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="OpremaZaVezbanje" ColumnName="OpremaZaVezbanje" />
+          <ScalarProperty Name="OpremaUteretaniIdOprema" ColumnName="OpremaUteretaniIdOprema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uzimas">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Uzima)">
+        <MappingFragment StoreEntitySet="Uzimas">
+          <ScalarProperty Name="CasTreningaIdCasTreninga" ColumnName="CasTreningaIdCasTreninga" />
+          <ScalarProperty Name="ClanKartica" ColumnName="ClanKartica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ides">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Ide)">
+        <MappingFragment StoreEntitySet="Ides">
+          <ScalarProperty Name="TeratanaLokacija" ColumnName="TeratanaLokacija" />
+          <ScalarProperty Name="ClanKartica" ColumnName="ClanKartica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProbniTrenings">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ProbniTrening)">
+        <MappingFragment StoreEntitySet="ProbniTrenings">
+          <ScalarProperty Name="TeratanaLokacija" ColumnName="TeratanaLokacija" />
+          <ScalarProperty Name="ObicanVezbacIdObicanVezbac" ColumnName="ObicanVezbacIdObicanVezbac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Radis">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Radi)">
+        <MappingFragment StoreEntitySet="Radis">
+          <ScalarProperty Name="TeratanaLokacija" ColumnName="TeratanaLokacija" />
+          <ScalarProperty Name="ZaposleniIdBedz" ColumnName="ZaposleniIdBedz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cistis">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Cisti)">
+        <MappingFragment StoreEntitySet="Cistis">
+          <ScalarProperty Name="TeratanaLokacija" ColumnName="TeratanaLokacija" />
+          <ScalarProperty Name="CistacicaIdBedz" ColumnName="CistacicaIdBedz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Drzis">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Drzi)">
+        <MappingFragment StoreEntitySet="Drzis">
+          <ScalarProperty Name="TrenerIdBedz" ColumnName="TrenerIdBedz" />
+          <ScalarProperty Name="CasTreningaIdCasTreninga" ColumnName="CasTreningaIdCasTreninga" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
